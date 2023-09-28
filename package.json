@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "deploy": "^1.0.3",
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
