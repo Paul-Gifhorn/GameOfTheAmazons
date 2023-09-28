@@ -1,0 +1,53 @@
+nav {
+    top: 0;
+    background-color: darkgray;
+    width: 15vh;
+    height: 100vh;
+    position: fixed;
+}
+
+div .content {
+    padding-left: 17vh;
+
+
+}
+
+
+.Game table , .Game p{
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+li :hover{
+    background-color: rgb(0, 241, 0);
+
+}
+
+
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body{ 
+    background-color: gray;
+}
+
+img{
+    height: 15px;
+    width: 15px;   
+}
+img.empty{
+    opacity: 0;
+}
+
+.figure{
+    height: 30px;
+    width: 30px;
+}
+
+button.figure:hover{
+    border-color: gold;
+}
