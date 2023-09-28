@@ -27,7 +27,7 @@ function App() {
   return (
   <player_id.Provider value={{player_nr, setPlayerID}}>
     <player_context.Provider value={{player_name, setPlayer_name}}>
-      <BrowserRouter>
+      <BrowserRouter basename='/GameOfTheAmazons'>
           <Routes>
             <Route path="/" element={<Navbar></Navbar>}/>
               <Route index element={<Home />} />
