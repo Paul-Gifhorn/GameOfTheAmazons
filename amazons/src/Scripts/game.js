@@ -70,7 +70,7 @@ export function BoardBuilder() {
       for (let j = 0; j < column; j++) {
           // multiple if statements to determine the picture 
 
-          if(squares[i][j] === 1){
+          if(squares[i][j] === 0){
             rowCells.push(
               <button onClick={help_move} x={x} y={y} className="figure" type="queen"  style={{ backgroundColor: 'gray', color: 'white' }}>
                  <img src={w_amazon} x={x} y={y}></img>
@@ -78,7 +78,7 @@ export function BoardBuilder() {
             );
           }
 
-          if(squares[i][j] === 0){
+          if(squares[i][j] === 1){
             rowCells.push(
               <button onClick={help_move} x={x} y={y} className="figure" type="queen"  style={{ backgroundColor: 'gray', color: 'white' }}>
                  <img src={b_amazon} x={x} y={y}></img>
@@ -127,19 +127,21 @@ export function BoardBuilder() {
 
     let newMoveArray = move_array
     // stores each value
-    newMoveArray.push(parseInt(event.target.getAttribute('x')))
     newMoveArray.push(parseInt(event.target.getAttribute('y')))
+    newMoveArray.push(parseInt(event.target.getAttribute('x')))
     //console.log(newMoveArray)
     setMove_array(newMoveArray)
-    //console.log(event.target.getAttribute(x))
-    //console.log(event.target.getAttribute(y))
+    console.log(event.target.getAttribute(x))
+    console.log(event.target.getAttribute(y))
+    console.log(move_array)
     
     }
 
   // makes the move 
   function go (){
     try {
-      move(props.player_id,0,move_array[0],move_array[1],move_array[2],move_array[3],move_array[4],move_array[5])
+      move(props.player_id,props.response.id,move_array[0],move_array[1],move_array[2],move_array[3],move_array[4],move_array[5])
+      setMove_array([])
     } catch (error) {
       console.log(error)
     }
