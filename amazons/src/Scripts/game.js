@@ -127,8 +127,8 @@ export function BoardBuilder() {
 
     let newMoveArray = move_array
     // stores each value
-    newMoveArray.push(parseInt(event.target.getAttribute('y')))
     newMoveArray.push(parseInt(event.target.getAttribute('x')))
+    newMoveArray.push(parseInt(event.target.getAttribute('y')))
     //console.log(newMoveArray)
     setMove_array(newMoveArray)
     //console.log(event.target.getAttribute(x))
