@@ -1,3 +1,7 @@
+// -------------------
+// Scripts about adding deleting and get Players
+// Also whole reset 
+// -------------------
 
 // adds Player 
 export function addPlayer(thename){

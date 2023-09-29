@@ -1,5 +1,5 @@
-
-
+// a move needs a Player a Game and 3 Positions 
+// the values get used in the move data
 export function move(player,game,row,col,erow,ecol,srow,scol){
     const url = 'https://gruppe3.toni-barth.com/move/'+player+"/"+game;
 
@@ -19,9 +19,9 @@ export function move(player,game,row,col,erow,ecol,srow,scol){
             "column": parseInt(scol),
         }
     }
+    //console.log(move_data);
 
-    console.log(move_data);
-
+    // move data get Posted on the API-Server
     fetch(url, {
     method: 'POST',
     headers: {
@@ -37,4 +37,3 @@ export function move(player,game,row,col,erow,ecol,srow,scol){
         console.error('Error:', error);
     });
 }
-

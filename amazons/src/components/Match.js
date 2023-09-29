@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useContext} from "react";
 
 
-import { PlayerName, player_context } from './Context';
-import {PlayerID, player_id} from './Context';
+import {player_context } from './Context';
+import {player_id} from './Context';
 
 import { getGameStatus } from "../Scripts/board";
 import { BoardBuilder2 } from "../Scripts/game";
@@ -33,7 +33,7 @@ fetchData();
     };
 }, []);
 
-    let {player_name, setPlayer_name} = useContext(player_context);
+    //let {player_name, setPlayer_name} = useContext(player_context);
     let {player_nr, setPlayerID} = useContext(player_id);
 
     return(

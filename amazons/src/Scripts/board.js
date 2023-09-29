@@ -1,4 +1,4 @@
-
+// makes a post request to the Api-Server to create a new Match
 
 export function addBoard(x,y){
     const url = 'https://gruppe3.toni-barth.com/games/';
@@ -44,12 +44,14 @@ export function addBoard(x,y){
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Response:', data);
+        //console.log('Response:', data);
     })
     .catch(error => {
         console.error('Error:', error);
     });
 }
+
+// Returns the saved Games 
 export function getGames() {
     const url = 'https://gruppe3.toni-barth.com/games/';
   
@@ -67,6 +69,7 @@ export function getGames() {
       });
   }
 
+  // Selects a specific Game 
   export function getGame(id) {
     const url = `https://gruppe3.toni-barth.com/games/${id}`;
   
